@@ -424,69 +424,142 @@ ul.box-redes-sociais li.whatsap a:before{
 }
 
 
+/* ================================
+   RESPONSIVIDADE SEM MUDAR LAYOUT
+   ================================ */
 
-
-/* ================= RESPONSIVO ================= */
-
-/* TABLET */
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .container img {
-    width: 250px;
-  }
+/* Ajustes gerais */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* CELULAR */
-@media (max-width: 600px) {
-  header.chocolate {
-    flex-direction: column;
-    text-align: center;
-  }
+/* =====================
+   TABLET (até 1024px)
+   ===================== */
+@media (max-width: 1024px) {
 
-  header nav {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
+    header.chocolate {
+        padding: 15px 20px;
+        margin-top: 20px;
+    }
 
-  .produtos h2{
-          font-size: 2.3rem;
+    nav {
+        gap: 15px;
+    }
 
-  }
+    .inicio h1 {
+        font-size: 1.8rem;
+        padding: 0 20px;
+        text-align: center;
+        margin-top: 550px;
+    }
 
-
-  .inicio h1 {
-    font-size: 1.2rem;
-  }
-
-  .foto img {
-    height: 200px;
-  }
-
-  .contato {
-    flex-direction: column;
-  }
-
-  footer{
-    margin-top: 21rem;
-  }
+    .container {
+        gap: 20px;
+    }
 
 
-  @media (max-width: 600px) {
-   .inicio {
-      min-height: 70vh; /* menor no celular */
-      margin-top: 0;
 
-   }
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
 
-   .inicio h1, span{
-      min-height: 70vh; /* menor no celular */
-      margin-top: 0;
-   }
+    .contato {
+        padding: 40px 20px;
+    }
 }
 
+/* =====================
+   CELULAR (até 768px)
+   ===================== */
+@media (max-width: 768px) {
+
+    /* Header */
+    header.chocolate {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Início */
+    .inicio {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+
+    /* Sobre */
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+   
+    .produtos h2{
+        margin: -40px;
+    } 
+      
+
+
+    /* Galeria */
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Contato */
+    .contato {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form form {
+        width: 100%;
+    }
+}
+
+/* =====================
+   CELULAR PEQUENO (até 480px)
+   ===================== */
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .inicio h1 {
+        font-size: 1.2rem;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    footer h1 {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-top: 200px;
+    }
 }
